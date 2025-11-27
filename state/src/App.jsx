@@ -6,7 +6,11 @@ function App() {
     <div>
       <button onClick={()=>
         setCount(count+1)
-      }>{count}</button>
+      }>add</button>
+      {count}
+      <button onClick={()=>
+        setCount(count-1)
+      }>sub</button>
     </div>
   )
 }
