@@ -17,9 +17,9 @@ function Arrays() {
     <input value={input} type="text" onChange={(e)=>{
         setInput(e.target.value)
     }}></input>
-    <button onClick={add}>Add</button>
+    <button onClick={handleAdd}>Add</button>
     {stateArr}
-    <button onClick={sub}> sub</button>
+    <button onClick={handleSub}> sub</button>
     </>
   )
 }
