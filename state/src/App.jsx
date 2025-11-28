@@ -10,7 +10,6 @@ function App() {
   return (
     <div>
       {!show && <Count/>}
-      <br></br>
       {show && <Arrays/>}
       <button onClick={()=>
         setShow(!show)
