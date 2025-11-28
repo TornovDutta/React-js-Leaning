@@ -4,12 +4,12 @@ function Arrays() {
     const arr=["apple"," banana"," orange"];
     const [stateArr,setStateArr]=useState(arr);
     const [input,setInput]=useState("");
-    function add(){
+    function handleAdd(){
         if(input.trim=="")return; 
         setStateArr([...stateArr,input]);
         setInput("");
     }
-    function sub(){
+    function handleSub(){
         setStateArr(stateArr.slice(0,-1));
     }
   return (
