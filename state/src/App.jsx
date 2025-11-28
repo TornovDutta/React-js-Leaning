@@ -13,6 +13,7 @@ function App() {
       <button onClick={()=>{
         setCount(count-1)
       }}>sub</button>
+      <br></br>
       <Arrays/>
     </div>
   )
