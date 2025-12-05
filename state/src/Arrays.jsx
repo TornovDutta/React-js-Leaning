@@ -1,8 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-function Arrays() {
-    const arr=["apple"," banana"," orange"];
-    const [stateArr,setStateArr]=useState(arr);
+function Arrays({stateArr,setStateArr}) {
+    
     const [input,setInput]=useState("");
     function handleAdd(){
         if(input.trim=="")return; 
