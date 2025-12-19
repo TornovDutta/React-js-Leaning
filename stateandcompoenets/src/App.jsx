@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-
+import './App.css';
+import Count from "./Count";
+import Array  from './Array';
 function App() {
   const [count,setCount]=useState(0);
   const [arr,setArr]=useState([
@@ -26,32 +28,11 @@ function App() {
   return (
     <div className="App">
       {show && (
-        <div>
-          <p>{count}</p>
-          <button onClick={() => setCount(count + 1)}>Add</button>
-          <button onClick={() => setCount(count - 1)}>Sub</button>
-        </div>
+        <Count count={count} setCount={setCount}/>
       )}
 
       <hr />
-      {!show && (
-  <>
-    <ul>
-      {arr.map(element => (
-        <li key={element.id}>{element.name}</li>
-      ))}
-    </ul>
-
-    <input
-      type="text"
-      value={name}
-      onChange={(e) => setName(e.target.value)}
-    />
-
-    <button onClick={handleAdd}>Add</button>
-    <button onClick={handleSub}>Sub</button>
-  </>
-  )}
+      {!show && <Array arr={arr} setArr={setArr} name={name} setName={setName} handleAdd={handleAdd} handleSub={handleSub}/>}
   <button onClick={()=>hide(!show)}>change</button>
 
     </div>
