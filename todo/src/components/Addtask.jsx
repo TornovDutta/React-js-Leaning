@@ -18,7 +18,7 @@ export default function Addtask({ taskList, setTaskList, task, setTask }) {
       date: `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
     };
 
-    // EDIT MODE
+
     if (task.id) {
       setTaskList(
         taskList.map((t) =>
@@ -26,12 +26,11 @@ export default function Addtask({ taskList, setTaskList, task, setTask }) {
         )
       );
     }
-    // ADD MODE
+
     else {
       setTaskList([...taskList, newTask]);
     }
 
-    // Reset input
     setTask({ id: "", name: "", date: "" });
   };
 
